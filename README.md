@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # TP-BackendFrontend-3863
+=======
+# TP5BackendFrontend3863
+>>>>>>> 39845300301c5dc55a2e363b3daa18f2162f71d8
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
 

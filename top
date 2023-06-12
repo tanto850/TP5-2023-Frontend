@@ -1,0 +1,625 @@
+[33mcommit f8a546632069c56fe0a91dfa2ae785402c742af7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Antonela Flores <totte_30_98@hotmail.com>
+Date:   Mon Jun 12 18:03:26 2023 -0300
+
+    segundo commit
+
+[1mdiff --git a/.browserslistrc b/.browserslistrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4f9ac26[m
+[1m--- /dev/null[m
+[1m+++ b/.browserslistrc[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# This file is used by the build system to adjust CSS and JS output to support the specified browsers below.[m
+[32m+[m[32m# For additional information regarding the format and rule options, please see:[m
+[32m+[m[32m# https://github.com/browserslist/browserslist#queries[m
+[32m+[m
+[32m+[m[32m# For the full list of supported browsers by the Angular framework, please see:[m
+[32m+[m[32m# https://angular.io/guide/browser-support[m
+[32m+[m
+[32m+[m[32m# You can see what browsers were selected by your queries by running:[m
+[32m+[m[32m#   npx browserslist[m
+[32m+[m
+[32m+[m[32mlast 1 Chrome version[m
+[32m+[m[32mlast 1 Firefox version[m
+[32m+[m[32mlast 2 Edge major versions[m
+[32m+[m[32mlast 2 Safari major versions[m
+[32m+[m[32mlast 2 iOS major versions[m
+[32m+[m[32mFirefox ESR[m
+[1mdiff --git a/.editorconfig b/.editorconfig[m
+[1mnew file mode 100644[m
+[1mindex 0000000..59d9a3a[m
+[1m--- /dev/null[m
+[1m+++ b/.editorconfig[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# Editor configuration, see https://editorconfig.org[m
+[32m+[m[32mroot = true[m
+[32m+[m
+[32m+[m[32m[*][m
+[32m+[m[32mcharset = utf-8[m
+[32m+[m[32mindent_style = space[m
+[32m+[m[32mindent_size = 2[m
+[32m+[m[32minsert_final_newline = true[m
+[32m+[m[32mtrim_trailing_whitespace = true[m
+[32m+[m
+[32m+[m[32m[*.ts][m
+[32m+[m[32mquote_type = single[m
+[32m+[m
+[32m+[m[32m[*.md][m
+[32m+[m[32mmax_line_length = off[m
+[32m+[m[32mtrim_trailing_whitespace = false[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0711527[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32m# See http://help.github.com/ignore-files/ for more about ignoring files.[m
+[32m+[m
+[32m+[m[32m# Compiled output[m
+[32m+[m[32m/dist[m
+[32m+[m[32m/tmp[m
+[32m+[m[32m/out-tsc[m
+[32m+[m[32m/bazel-out[m
+[32m+[m
+[32m+[m[32m# Node[m
+[32m+[m[32m/node_modules[m
+[32m+[m[32mnpm-debug.log[m
+[32m+[m[32myarn-error.log[m
+[32m+[m
+[32m+[m[32m# IDEs and editors[m
+[32m+[m[32m.idea/[m
+[32m+[m[32m.project[m
+[32m+[m[32m.classpath[m
+[32m+[m[32m.c9/[m
+[32m+[m[32m*.launch[m
+[32m+[m[32m.settings/[m
+[32m+[m[32m*.sublime-workspace[m
+[32m+[m
+[32m+[m[32m# Visual Studio Code[m
+[32m+[m[32m.vscode/*[m
+[32m+[m[32m!.vscode/settings.json[m
+[32m+[m[32m!.vscode/tasks.json[m
+[32m+[m[32m!.vscode/launch.json[m
+[32m+[m[32m!.vscode/extensions.json[m
+[32m+[m[32m.history/*[m
+[32m+[m
+[32m+[m[32m# Miscellaneous[m
+[32m+[m[32m/.angular/cache[m
+[32m+[m[32m.sass-cache/[m
+[32m+[m[32m/connect.lock[m
+[32m+[m[32m/coverage[m
+[32m+[m[32m/libpeerconnection.log[m
+[32m+[m[32mtestem.log[m
+[32m+[m[32m/typings[m
+[32m+[m
+[32m+[m[32m# System files[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32mThumbs.db[m
+[1mdiff --git a/.vscode/extensions.json b/.vscode/extensions.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..77b3745[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/extensions.json[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846[m
+[32m+[m[32m  "recommendations": ["angular.ng-template"][m
+[32m+[m[32m}[m
+[1mdiff --git a/.vscode/launch.json b/.vscode/launch.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..740e35a[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/launch.json[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387[m
+[32m+[m[32m  "version": "0.2.0",[m
+[32m+[m[32m  "configurations": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "name": "ng serve",[m
+[32m+[m[32m      "type": "pwa-chrome",[m
+[32m+[m[32m      "request": "launch",[m
+[32m+[m[32m      "preLaunchTask": "npm: start",[m
+[32m+[m[32m      "url": "http://localhost:4200/"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "name": "ng test",[m
+[32m+[m[32m      "type": "chrome",[m
+[32m+[m[32m      "request": "launch",[m
+[32m+[m[32m      "preLaunchTask": "npm: test",[m
+[32m+[m[32m      "url": "http://localhost:9876/debug.html"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  ][m
+[32m+[m[32m}[m
+[1mdiff --git a/.vscode/tasks.json b/.vscode/tasks.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a298b5b[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/tasks.json[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558[m
+[32m+[m[32m  "version": "2.0.0",[m
+[32m+[m[32m  "tasks": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "type": "npm",[m
+[32m+[m[32m      "script": "start",[m
+[32m+[m[32m      "isBackground": true,[m
+[32m+[m[32m      "problemMatcher": {[m
+[32m+[m[32m        "owner": "typescript",[m
+[32m+[m[32m        "pattern": "$tsc",[m
+[32m+[m[32m        "background": {[m
+[32m+[m[32m          "activeOnStart": true,[m
+[32m+[m[32m          "beginsPattern": {[m
+[32m+[m[32m            "regexp": "(.*?)"[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "endsPattern": {[m
+[32m+[m[32m            "regexp": "bundle generation complete"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "type": "npm",[m
+[32m+[m[32m      "script": "test",[m
+[32m+[m[32m      "isBackground": true,[m
+[32m+[m[32m      "problemMatcher": {[m
+[32m+[m[32m        "owner": "typescript",[m
+[32m+[m[32m        "pattern": "$tsc",[m
+[32m+[m[32m        "background": {[m
+[32m+[m[32m          "activeOnStart": true,[m
+[32m+[m[32m          "beginsPattern": {[m
+[32m+[m[32m            "regexp": "(.*?)"[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "endsPattern": {[m
+[32m+[m[32m            "regexp": "bundle generation complete"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  ][m
+[32m+[m[32m}[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 5f315fb..3906ed8 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-# TpWebservice3863[m
+[32m+[m[32m# TP-BackendFrontend-3863[m
+ [m
+ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.[m
+ [m
+[1mdiff --git a/angular.json b/angular.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c2bb0d0[m
+[1m--- /dev/null[m
+[1m+++ b/angular.json[m
+[36m@@ -0,0 +1,112 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",[m
+[32m+[m[32m  "cli": {[m
+[32m+[m[32m    "analytics": false[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "version": 1,[m
+[32m+[m[32m  "newProjectRoot": "projects",[m
+[32m+[m[32m  "projects": {[m
+[32m+[m[32m    "TP5-BackendFrontend-3863": {[m
+[32m+[m[32m      "projectType": "application",[m
+[32m+[m[32m      "schematics": {[m
+[32m+[m[32m        "@schematics/angular:application": {[m
+[32m+[m[32m          "strict": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "root": "",[m
+[32m+[m[32m      "sourceRoot": "src",[m
+[32m+[m[32m      "prefix": "app",[m
+[32m+[m[32m      "architect": {[m
+[32m+[m[32m        "build": {[m
+[32m+[m[32m          "builder": "@angular-devkit/build-angular:browser",[m
+[32m+[m[32m          "options": {[m
+[32m+[m[32m            "outputPath": "dist/tp-webservice-3863",[m
+[32m+[m[32m            "index": "src/index.html",[m
+[32m+[m[32m            "main": "src/main.ts",[m
+[32m+[m[32m            "polyfills": "src/polyfills.ts",[m
+[32m+[m[32m            "tsConfig": "tsconfig.app.json",[m
+[32m+[m[32m            "assets": [[m
+[32m+[m[32m              "src/favicon.ico",[m
+[32m+[m[32m              "src/assets"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "styles": [[m
+[32m+[m[32m              "src/styles.css",[m
+[32m+[m[32m              "node_modules/bootstrap/dist/css/bootstrap.min.css"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "scripts": [[m
+[32m+[m[32m              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"[m
+[32m+[m[32m            ][m
+[32m+[m[32m          },[m
+[32m+[m[32m          "configurations": {[m
+[32m+[m[32m            "production": {[m
+[32m+[m[32m              "budgets": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                  "type": "initial",[m
+[32m+[m[32m                  "maximumWarning": "500kb",[m
+[32m+[m[32m                  "maximumError": "1mb"[m
+[32m+[m[32m                },[m
+[32m+[m[32m                {[m
+[32m+[m[32m                  "type": "anyComponentStyle",[m
+[32m+[m[32m                  "maximumWarning": "2kb",[m
+[32m+[m[32m                  "maximumError": "4kb"[m
+[32m+[m[32m                }[m
+[32m+[m[32m              ],[m
+[32m+[m[32m              "fileReplacements": [[m
+[32m+[m[32m                {[m
+[32m+[m[32m                  "replace": "src/environments/environment.ts",[m
+[32m+[m[32m                  "with": "src/environments/environment.prod.ts"[m
+[32m+[m[32m                }[m
+[32m+[m[32m              ],[m
+[32m+[m[32m              "outputHashing": "all"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "development": {[m
+[32m+[m[32m              "buildOptimizer": false,[m
+[32m+[m[32m              "optimization": false,[m
+[32m+[m[32m              "vendorChunk": true,[m
+[32m+[m[32m              "extractLicenses": false,[m
+[32m+[m[32m              "sourceMap": true,[m
+[32m+[m[32m              "namedChunks": true[m
+[32m+[m[32m            }[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "defaultConfiguration": "production"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "serve": {[m
+[32m+[m[32m          "builder": "@angular-devkit/build-angular:dev-server",[m
+[32m+[m[32m          "configurations": {[m
+[32m+[m[32m            "production": {[m
+[32m+[m[32m              "browserTarget": "tp-webservice-3863:build:production"[m
+[32m+[m[32m            },[m
+[32m+[m[32m            "development": {[m
+[32m+[m[32m              "browserTarget": "tp-webservice-3863:build:development"[m
+[32m+[m[32m            }[m
+[32m+[m[32m          },[m
+[32m+[m[32m          "defaultConfiguration": "development"[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "extract-i18n": {[m
+[32m+[m[32m          "builder": "@angular-devkit/build-angular:extract-i18n",[m
+[32m+[m[32m          "options": {[m
+[32m+[m[32m            "browserTarget": "tp-webservice-3863:build"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "test": {[m
+[32m+[m[32m          "builder": "@angular-devkit/build-angular:karma",[m
+[32m+[m[32m          "options": {[m
+[32m+[m[32m            "main": "src/test.ts",[m
+[32m+[m[32m            "polyfills": "src/polyfills.ts",[m
+[32m+[m[32m            "tsConfig": "tsconfig.spec.json",[m
+[32m+[m[32m            "karmaConfig": "karma.conf.js",[m
+[32m+[m[32m            "assets": [[m
+[32m+[m[32m              "src/favicon.ico",[m
+[32m+[m[32m              "src/assets"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "styles": [[m
+[32m+[m[32m              "src/styles.css"[m
+[32m+[m[32m            ],[m
+[32m+[m[32m            "scripts": [][m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "defaultProject": "tp-webservice-3863"[m
+[32m+[m[32m}[m
+[1mdiff --git a/karma.conf.js b/karma.conf.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cbc7e9b[m
+[1m--- /dev/null[m
+[1m+++ b/karma.conf.js[m
+[36m@@ -0,0 +1,44 @@[m
+[32m+[m[32m// Karma configuration file, see link for more information[m
+[32m+[m[32m// https://karma-runner.github.io/1.0/config/configuration-file.html[m
+[32m+[m
+[32m+[m[32mmodule.exports = function (config) {[m
+[32m+[m[32m  config.set({[m
+[32m+[m[32m    basePath: '',[m
+[32m+[m[32m    frameworks: ['jasmine', '@angular-devkit/build-angular'],[m
+[32m+[m[32m    plugins: [[m
+[32m+[m[32m      require('karma-jasmine'),[m
+[32m+[m[32m      require('karma-chrome-launcher'),[m
+[32m+[m[32m      require('karma-jasmine-html-reporter'),[m
+[32m+[m[32m      require('karma-coverage'),[m
+[32m+[m[32m      require('@angular-devkit/build-angular/plugins/karma')[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    client: {[m
+[32m+[m[32m      jasmine: {[m
+[32m+[m[32m        // you can add configuration options for Jasmine here[m
+[32m+[m[32m        // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html[m
+[32m+[m[32m        // for example, you can disable the random execution with `random: false`[m
+[32m+[m[32m        // or set a specific seed with `seed: 4321`[m
+[32m+[m[32m      },[m
+[32m+[m[32m      clearContext: false // leave Jasmine Spec Runner output visible in browser[m
+[32m+[m[32m    },[m
+[32m+[m[32m    jasmineHtmlReporter: {[m
+[32m+[m[32m      suppressAll: true // removes the duplicated traces[m
+[32m+[m[32m    },[m
+[32m+[m[32m    coverageReporter: {[m
+[32m+[m[32m      dir: require('path').join(__dirname, './coverage/tp-webservice-3863'),[m
+[32m+[m[32m      subdir: '.',[m
+[32m+[m[32m      reporters: [[m
+[32m+[m[32m        { type: 'html' },[m
+[32m+[m[32m        { type: 'text-summary' }[m
+[32m+[m[32m      ][m
+[32m+[m[32m    },[m
+[32m+[m[32m    reporters: ['progress', 'kjhtml'],[m
+[32m+[m[32m    port: 9876,[m
+[32m+[m[32m    colors: true,[m
+[32m+[m[32m    logLevel: config.LOG_INFO,[m
+[32m+[m[32m    autoWatch: true,[m
+[32m+[m[32m    browsers: ['Chrome'],[m
+[32m+[m[32m    singleRun: false,[m
+[32m+[m[32m    restartOnFileChange: true[m
+[32m+[m[32m  });[m
+[32m+[m[32m};[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..75d319f[m
+[1m--- /dev/null[m
+[1m+++ b/package-lock.json[m
+[36m@@ -0,0 +1,21098 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "name": "tp-webservice-3863",[m
+[32m+[m[32m  "version": "0.0.0",[m
+[32m+[m[32m  "lockfileVersion": 2,[m
+[32m+[m[32m  "requires": true,[m
+[32m+[m[32m  "packages": {[m
+[32m+[m[32m    "": {[m
+[32m+[m[32m      "name": "tp-webservice-3863",[m
+[32m+[m[32m      "version": "0.0.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@angular/animations": "~13.3.0",[m
+[32m+[m[32m        "@angular/common": "~13.3.0",[m
+[32m+[m[32m        "@angular/compiler": "~13.3.0",[m
+[32m+[m[32m        "@angular/core": "~13.3.0",[m
+[32m+[m[32m        "@angular/forms": "~13.3.0",[m
+[32m+[m[32m        "@angular/platform-browser": "~13.3.0",[m
+[32m+[m[32m        "@angular/platform-browser-dynamic": "~13.3.0",[m
+[32m+[m[32m        "@angular/router": "~13.3.0",[m
+[32m+[m[32m        "bootstrap": "^5.3.0-alpha3",[m
+[32m+[m[32m        "bootstrap-icons": "^1.10.5",[m
+[32m+[m[32m        "rxjs": "~7.5.0",[m
+[32m+[m[32m        "tslib": "^2.3.0",[m
+[32m+[m[32m        "zone.js": "~0.11.4"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "devDependencies": {[m
+[32m+[m[32m        "@angular-devkit/build-angular": "~13.3.11",[m
+[32m+[m[32m        "@angular/cli": "~13.3.11",[m
+[32m+[m[32m        "@angular/compiler-cli": "~13.3.0",[m
+[32m+[m[32m        "@types/jasmine": "~3.10.0",[m
+[32m+[m[32m        "@types/node": "^12.11.1",[m
+[32m+[m[32m        "jasmine-core": "~4.0.0",[m
+[32m+[m[32m        "karma": "~6.3.0",[m
+[32m+[m[32m        "karma-chrome-launcher": "~3.1.0",[m
+[32m+[m[32m        "karma-coverage": "~2.1.0",[m
+[32m+[m[32m        "karma-jasmine": "~4.0.0",[m
+[32m+[m[32m        "karma-jasmine-html-reporter": "~1.7.0",[m
+[32m+[m[32m        "typescript": "~4.6.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@ampproject/remapping": {[m
+[32m+[m[32m      "version": "2.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@jridgewell/gen-mapping": "^0.1.0",[m
+[32m+[m[32m        "@jridgewell/trace-mapping": "^0.3.9"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=6.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/architect": {[m
+[32m+[m[32m      "version": "0.1303.11",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@angular-devkit/architect/-/architect-0.1303.11.tgz",[m
+[32m+[m[32m      "integrity": "sha512-JwrWomNqNGjAeKlqV2pimUFlCgFxQy+Vioz9+QAPIrUkvvjbkQ1dZKOe8Ul8eosb1N3Ln282U6qzOpHKfJ4TOg==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@angular-devkit/core": "13.3.11",[m
+[32m+[m[32m        "rxjs": "6.6.7"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": "^12.20.0 || ^14.15.0 || >=16.10.0",[m
+[32m+[m[32m        "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",[m
+[32m+[m[32m        "yarn": ">= 1.13.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/architect/node_modules/rxjs": {[m
+[32m+[m[32m      "version": "6.6.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": "^1.9.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "npm": ">=2.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/architect/node_modules/tslib": {[m
+[32m+[m[32m      "version": "1.14.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-angular": {[m
+[32m+[m[32m      "version": "13.3.11",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@angular-devkit/build-angular/-/build-angular-13.3.11.tgz",[m
+[32m+[m[32m      "integrity": "sha512-H4tpdmRu+6HSjsL+swV/8qj8v0YSDq6lpb31EYajlBB6fDj+YJQvHgaWvexSWl6eIqgDKXcujhNUjNi1enjwHw==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@ampproject/remapping": "2.2.0",[m
+[32m+[m[32m        "@angular-devkit/architect": "0.1303.11",[m
+[32m+[m[32m        "@angular-devkit/build-webpack": "0.1303.11",[m
+[32m+[m[32m        "@angular-devkit/core": "13.3.11",[m
+[32m+[m[32m        "@babel/core": "7.16.12",[m
+[32m+[m[32m        "@babel/generator": "7.16.8",[m
+[32m+[m[32m        "@babel/helper-annotate-as-pure": "7.16.7",[m
+[32m+[m[32m        "@babel/plugin-proposal-async-generator-functions": "7.16.8",[m
+[32m+[m[32m        "@babel/plugin-transform-async-to-generator": "7.16.8",[m
+[32m+[m[32m        "@babel/plugin-transform-runtime": "7.16.10",[m
+[32m+[m[32m        "@babel/preset-env": "7.16.11",[m
+[32m+[m[32m        "@babel/runtime": "7.16.7",[m
+[32m+[m[32m        "@babel/template": "7.16.7",[m
+[32m+[m[32m        "@discoveryjs/json-ext": "0.5.6",[m
+[32m+[m[32m        "@ngtools/webpack": "13.3.11",[m
+[32m+[m[32m        "ansi-colors": "4.1.1",[m
+[32m+[m[32m        "babel-loader": "8.2.5",[m
+[32m+[m[32m        "babel-plugin-istanbul": "6.1.1",[m
+[32m+[m[32m        "browserslist": "^4.9.1",[m
+[32m+[m[32m        "cacache": "15.3.0",[m
+[32m+[m[32m        "circular-dependency-plugin": "5.2.2",[m
+[32m+[m[32m        "copy-webpack-plugin": "10.2.1",[m
+[32m+[m[32m        "core-js": "3.20.3",[m
+[32m+[m[32m        "critters": "0.0.16",[m
+[32m+[m[32m        "css-loader": "6.5.1",[m
+[32m+[m[32m        "esbuild-wasm": "0.14.22",[m
+[32m+[m[32m        "glob": "7.2.0",[m
+[32m+[m[32m        "https-proxy-agent": "5.0.0",[m
+[32m+[m[32m        "inquirer": "8.2.0",[m
+[32m+[m[32m        "jsonc-parser": "3.0.0",[m
+[32m+[m[32m        "karma-source-map-support": "1.4.0",[m
+[32m+[m[32m        "less": "4.1.2",[m
+[32m+[m[32m        "less-loader": "10.2.0",[m
+[32m+[m[32m        "license-webpack-plugin": "4.0.2",[m
+[32m+[m[32m        "loader-utils": "3.2.1",[m
+[32m+[m[32m        "mini-css-extract-plugin": "2.5.3",[m
+[32m+[m[32m        "minimatch": "3.0.5",[m
+[32m+[m[32m        "open": "8.4.0",[m
+[32m+[m[32m        "ora": "5.4.1",[m
+[32m+[m[32m        "parse5-html-rewriting-stream": "6.0.1",[m
+[32m+[m[32m        "piscina": "3.2.0",[m
+[32m+[m[32m        "postcss": "8.4.5",[m
+[32m+[m[32m        "postcss-import": "14.0.2",[m
+[32m+[m[32m        "postcss-loader": "6.2.1",[m
+[32m+[m[32m        "postcss-preset-env": "7.2.3",[m
+[32m+[m[32m        "regenerator-runtime": "0.13.9",[m
+[32m+[m[32m        "resolve-url-loader": "5.0.0",[m
+[32m+[m[32m        "rxjs": "6.6.7",[m
+[32m+[m[32m        "sass": "1.49.9",[m
+[32m+[m[32m        "sass-loader": "12.4.0",[m
+[32m+[m[32m        "semver": "7.3.5",[m
+[32m+[m[32m        "source-map-loader": "3.0.1",[m
+[32m+[m[32m        "source-map-support": "0.5.21",[m
+[32m+[m[32m        "stylus": "0.56.0",[m
+[32m+[m[32m        "stylus-loader": "6.2.0",[m
+[32m+[m[32m        "terser": "5.14.2",[m
+[32m+[m[32m        "text-table": "0.2.0",[m
+[32m+[m[32m        "tree-kill": "1.2.2",[m
+[32m+[m[32m        "tslib": "2.3.1",[m
+[32m+[m[32m        "webpack": "5.76.1",[m
+[32m+[m[32m        "webpack-dev-middleware": "5.3.0",[m
+[32m+[m[32m        "webpack-dev-server": "4.7.3",[m
+[32m+[m[32m        "webpack-merge": "5.8.0",[m
+[32m+[m[32m        "webpack-subresource-integrity": "5.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": "^12.20.0 || ^14.15.0 || >=16.10.0",[m
+[32m+[m[32m        "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",[m
+[32m+[m[32m        "yarn": ">= 1.13.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "optionalDependencies": {[m
+[32m+[m[32m        "esbuild": "0.14.22"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "@angular/compiler-cli": "^13.0.0 || ^13.3.0-rc.0",[m
+[32m+[m[32m        "@angular/localize": "^13.0.0 || ^13.3.0-rc.0",[m
+[32m+[m[32m        "@angular/service-worker": "^13.0.0 || ^13.3.0-rc.0",[m
+[32m+[m[32m        "karma": "^6.3.0",[m
+[32m+[m[32m        "ng-packagr": "^13.0.0",[m
+[32m+[m[32m        "protractor": "^7.0.0",[m
+[32m+[m[32m        "tailwindcss": "^2.0.0 || ^3.0.0",[m
+[32m+[m[32m        "typescript": ">=4.4.3 <4.7"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "@angular/localize": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "@angular/service-worker": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "karma": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "ng-packagr": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "protractor": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "tailwindcss": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-angular/node_modules/rxjs": {[m
+[32m+[m[32m      "version": "6.6.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": "^1.9.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "npm": ">=2.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-angular/node_modules/rxjs/node_modules/tslib": {[m
+[32m+[m[32m      "version": "1.14.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-angular/node_modules/tslib": {[m
+[32m+[m[32m      "version": "2.3.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-webpack": {[m
+[32m+[m[32m      "version": "0.1303.11",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@angular-devkit/build-webpack/-/build-webpack-0.1303.11.tgz",[m
+[32m+[m[32m      "integrity": "sha512-599pWAQLq7i/fmEZLb7PaNU6nmPC3EZbJk1nU/UBcpx7FWs9e0o2XQE2PCAs0buqtQxVjSgY6kMO8ex5dUmgUQ==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@angular-devkit/architect": "0.1303.11",[m
+[32m+[m[32m        "rxjs": "6.6.7"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": "^12.20.0 || ^14.15.0 || >=16.10.0",[m
+[32m+[m[32m        "npm": "^6.11.0 || ^7.5.6 || >=8.0.0",[m
+[32m+[m[32m        "yarn": ">= 1.13.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "webpack": "^5.30.0",[m
+[32m+[m[32m        "webpack-dev-server": "^4.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-webpack/node_modules/rxjs": {[m
+[32m+[m[32m      "version": "6.6.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": "^1.9.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "npm": ">=2.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/build-webpack/node_modules/tslib": {[m
+[32m+[m[32m      "version": "1.14.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",[m
+[32m+[m[32m      "dev": true[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@angular-devkit/core": {[m
+[32m+[m[32m      "version": "13.3.11",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.or
