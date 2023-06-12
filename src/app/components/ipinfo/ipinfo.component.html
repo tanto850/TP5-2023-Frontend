@@ -1,0 +1,37 @@
+<div class="col-sm-12 col-md-4">
+    <form action="get" class="bg-info row g-3">
+      <div class="mb-3">
+        <label for="ip" class="form-label">Ingresar IP:</label>
+        <input type="text" class="form-control" id="ip" [(ngModel)]="ip" name="ip">
+      </div>
+      <div class="d-grid gap-2 mg-bottom-2 mb-3" >
+        <button class="btn btn-primary" type="button" (click)="obtenerInfo()">Buscar</button>
+      </div>
+    </form>
+</div>
+<div class="card col-sm-12 col-md-4" *ngIf = "mostrar == 'S'">
+    <form>
+        <div class="mb-3">
+            <label for="pais" class="form-label">Pais:</label>
+            <input type="text" class="form-control" id="pais" placeholder="{{pais}}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad:</label>
+            <input type="text" class="form-control" id="ciudad" placeholder="{{ciudad}}" disabled>
+        </div>
+        <p>Información de la ubicación de la ip</p>
+        <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha del Lugar:</label>
+            <input type="text" class="form-control" id="fecha" placeholder="{{fechaLugar}}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="hora" class="form-label">Hora del Lugar:</label>
+            <input type="text" class="form-control" id="hora" placeholder="{{horaLugar}}" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="zona" class="form-label">Zona Horaria:</label>
+            <input type="text" class="form-control" id="zona" placeholder="{{zona}}" disabled>
+        </div>
+        <a>Ir al Lugar</a><a href="{{link}}">{{link}}</a>
+    </form>
+</div>

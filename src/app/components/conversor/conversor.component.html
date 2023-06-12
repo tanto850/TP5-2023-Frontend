@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row">
+        <article class="d-none d-sm-none d-md-block col-md-8">
+          <span class="border border-info-subtle">
+            <div class="bg-info">
+              <p class="text-center h3">Conversor de Divisas</p>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col" class="text-center"><img src="assets/pageb/eeuu.jpg" alt="" class="rounded" width="50px"><br>USD</th>
+                  <th scope="col" class="text-center"><img src="assets/pageb/inglaterra.jpg" alt="" class="rounded" width="50px"><br>GBP</th>
+                  <th scope="col" class="text-center"><img src="assets/pageb/argentina.jpg" alt="" class="rounded" width="50px"><br>ARS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-center"><img src="assets/pageb/eeuu.jpg" alt="" class="rounded" width="50px"></th>
+                  <th scope="row" class="text-center">USD <br>Inverse</th>
+                  <td class="text-center">1.000000<br>1.000000</td>
+                  <td class="text-center">0.811469<br>1.232332</td>
+                  <td class="text-center">64.87725<br>0.015414</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center"><img src="assets/pageb/inglaterra.jpg" alt="" class="rounded" width="50px"></th>
+                  <th scope="row" class="text-center">USD <br>Inverse</th>
+                  <td class="text-center">1.232332<br>0.811469</td>
+                  <td class="text-center">1.000000<br>1.000000</td>
+                  <td class="text-center">79.95034<br>0.012508</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-center"><img src="assets/pageb/argentina.jpg" alt="" class="rounded" width="50px"></th>
+                  <th scope="row" class="text-center">USD <br>Inverse</th>
+                  <td class="text-center">0.015414<br>64.87725</td>
+                  <td class="text-center">0.012508<br>79.95034</td>
+                  <td class="text-center">1.000000<br>1.000000</td>
+                </tr>
+              </tbody>
+            </table>
+          </span>
+        </article>
+        <aside class="col-sm-12 col-md-4 bg-info">
+          <div class="bg-info">
+            <p class="text-center h3">Conversor de Divisas</p>
+          </div>
+          <div class="bg-info ">
+            <form action="get" class="bg-info row g-3">
+              <div class="mb-3">
+                <label for="Cantidad" class="form-label">Cantidad</label>
+                <input type="text" class="form-control" id="valor" [(ngModel)]="param.valor" name="valor">
+              </div>
+              <div class="mb-3">
+                <label for="de" class="form-label">De</label>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.deTipo" name="deTipo">
+                  <option value="AUD">AUD Australia Dólar</option>
+                  <option value="GBP">GBP Libra Esterlina</option>
+                  <option value="EUR">EUR Euro</option>
+                  <option value="JPY">JPY Japón Yen</option>
+                  <option value="CHF">CHF Suiza Franco</option>
+                  <option value="USD">USD Estados Unidos Dólar</option>
+                  <option value="ARS">ARS Pesos Argentinos</option>
+                  <option value="BRL">BRL Brasil Real</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="Cantidad" class="form-label">A</label>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.aTipo" name="aTipo">
+                  <option value="AUD">AUD Australia Dólar</option>
+                  <option value="GBP">GBP Libra Esterlina</option>
+                  <option value="EUR">EUR Euro</option>
+                  <option value="JPY">JPY Japón Yen</option>
+                  <option value="CHF">CHF Suiza Franco</option>
+                  <option value="USD">USD Estados Unidos Dólar</option>
+                  <option value="ARS">ARS Pesos Argentinos</option>
+                  <option value="BRL">BRL Brasil Real</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="resultado" placeholder="{{resultado}}" disabled>
+              </div>
+              <div class="d-grid gap-2 mg-bottom-2 mb-3" >
+                <button class="btn btn-primary" type="button" (click)="convertir()">Convertir...</button>
+              </div>
+            </form>
+          </div>
+        </aside>
+    </div>
+</div>

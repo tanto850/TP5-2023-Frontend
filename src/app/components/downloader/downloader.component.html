@@ -1,0 +1,19 @@
+<form>
+    <div class="col-md-3 col-sm-4 col-xs-6 mb-3">
+      <label for="idlink" class="form-label">Ingresar link para descargar:</label>
+      <input type="text" class="form-control form-control-sm" id="idlink" [(ngModel)]="link" name="link" >
+    </div>
+</form>
+<button type="button" class="btn btn-primary" (click)="convertir()">Convertir</button>
+<div class="card col-md-6 mt-3" *ngIf = "mostrar == 'S'">
+    <h5 class="card-header">{{titulo}}</h5>
+    <div class="row g-0">
+        <div class="col-sm-8">
+        <div class="card-body">
+            <a href="{{resultado}}">
+                <button type="button" class="btn btn-primary">Descargar MP3</button>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>

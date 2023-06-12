@@ -1,0 +1,54 @@
+<div class="container">
+    <section>
+      <div class="row">
+        <div class="card col-md-4 col-sm-6" style="max-width: 540px;" *ngFor="let s of horoscopo">
+          <div class="row g-0">
+            <div class="col-sm-4">
+              <img src="{{s.imagen}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-sm-8">
+              <div class="card-body">
+                <div class="d-grid gap-2">
+                  <button class="btn btn-info" style="color: white;" type="button" (click)="leerHoroscopo(s)"><strong>{{s.nombre}}</strong></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card" *ngIf = "mostrar == 'S'">
+        <h5 class="card-header">{{titulo}}</h5>
+        <div class="row g-0">
+          <div class="col-sm-8">
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <h5 class="card-title">Horóscopo de Hoy</h5>
+                <p class="card-text">{{generalDia}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <img src="{{imagen}}" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="card" *ngIf = "mostrar == 'S'">
+        <h5 class="card-header">{{titulo}}</h5>
+        <div class="row g-0">
+          <div class="col-sm-8">
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <h5 class="card-title">Horóscopo del Mes</h5>
+                <p class="card-text">{{generalMes}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <img src="{{imagen}}" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
