@@ -2,18 +2,22 @@
     <section>
       <div class="row">
         <div class="card col-md-4 col-sm-6" style="max-width: 540px;" *ngFor="let p of productos">
-          <div class="row g-0">
+          <!--div class="row g-0"-->
             <div class="col-sm-4">
               <img src="{{p.imagen}}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-sm-8">
               <div class="card-body">
                 <div class="d-grid gap-2">
-                  <button class="btn btn-info" style="color: white;" type="button" (click)="verProducto(p)"><strong>{{p.nombre}}</strong></button>
+                  <!--button class="btn btn-info" style="color: white;" type="button" (click)="verProducto(p)"><strong>{{p.nombre}}</strong></button-->
+                  <h3>{{p.nombre}}</h3>
+                  <br>
+                  <h3>{{p.precio}}</h3>
+                  <h5>{{p.descripcion}}</h5>
                 </div>
               </div>
             </div>
-          </div>
+          <!--/div-->
         </div>
       </div>
     </section>

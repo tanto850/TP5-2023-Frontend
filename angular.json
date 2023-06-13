@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TP5-BackendFrontend-3863": {
+    "tp-webservice-3863": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {

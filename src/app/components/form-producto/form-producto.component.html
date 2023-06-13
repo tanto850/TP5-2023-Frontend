@@ -6,26 +6,26 @@
         <form>
             <div class="mb-3">
                 <label for="Nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" [(ngModel)]="producto.nombre" name="nombre">
+                <input type="Text" class="form-control" id="nombre" [(ngModel)]="producto.nombre" name="nombre">
             </div>
             <div class="mb-3">
                 <label for="Descripcion" class="form-label">Descripción</label>
-                <textarea name="descripcion" class="form-control" id="descripcion" rows="3"></textarea>
+                <textarea name="descripcion" class="form-control" id="descripcion" rows="3" [(ngModel)]="producto.descripcion"></textarea>
             </div>
             <div class="mb-3">
                 <label for="Imagen" class="form-label">Imagen</label>
-                <input type="text" class="form-control" id="imagen" [(ngModel)]="producto.imagen" name="imagen">
+                <input type="Text" class="form-control" id="imagen" [(ngModel)]="producto.imagen" name="imagen">
             </div>
             <div class="mb-3">
                 <label for="Precio" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="precio" [(ngModel)]="producto.precio" name="precio">
+                <input type="Number" class="form-control" id="precio" [(ngModel)]="producto.precio" name="precio">
             </div>
             <div class="mb-3">
                 <label for="Stock" class="form-label">Stock Disponible</label>
                 <input type="number" class="form-control" id="stock" [(ngModel)]="producto.stock" name="stock">
             </div>
             <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="producto.destacado" checked>
                 <label class="form-check-label" for="flexCheckChecked">
                   Destacado
                 </label>
