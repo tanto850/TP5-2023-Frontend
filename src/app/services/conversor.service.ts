@@ -31,4 +31,35 @@ export class ConversorService {
     return this.http.post(direccion ,body ,httpOption);
   }
 
+  createTransaccion(trans:Conversor):Observable<any>{
+
+    const httpOption = {
+      headers: new HttpHeaders({
+      })
+    }
+
+    let direccion = "http://localhost:3000/api/transaccion/";
+
+    const body = new HttpParams()
+    //  .set('from-value', param.valor)
+    //    .set('from-type', param.deTipo)
+    //      .set('to_type', param.aTipo);
+
+    return this.http.post(direccion ,body ,httpOption);
+  }
+
+  getTransaccions():Observable<any>{
+
+    const httpOption = {
+      headers: new HttpHeaders({
+      })
+    }
+
+    let direccion = "http://localhost:3000/api/transaccion/";
+
+    const body = new HttpParams()
+    
+    return this.http.get(direccion ,httpOption);
+  }
+
 }

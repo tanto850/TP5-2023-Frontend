@@ -10,11 +10,14 @@ import { ConversorService } from 'src/app/services/conversor.service';
 export class ConversorComponent implements OnInit {
 
   param:Conversor;
+  transacciones:Array<Conversor>;
   
-
   constructor(private conversorService:ConversorService) {
 
     this.param = new Conversor();
+    this.transacciones = new Array<Conversor>();
+
+    this.obtenerTrns();
 
    }
 
@@ -28,11 +31,33 @@ export class ConversorComponent implements OnInit {
       result=>{
         console.log(result);
         this.resultado = result.result;
+        this.param.resultado = result.result;
+        this.conversorService.createTransaccion(this.param).subscribe(
+          result=>{
+            console.log("Transaccion creada")
+          },
+          error=>{
+            console.log(error);
+          }
+        )
       },
       error=>{
-        console.log(error)
+        console.log(error);
       }
     )
+  }
+
+  obtenerTrns(){
+
+    this.conversorService.getTransaccions().subscribe(
+      result=>{
+        Object.assign(this.transacciones, result);
+      },
+      error=>{
+        console.log(error);
+      }
+    )
+
   }
 
 }

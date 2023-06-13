@@ -29,9 +29,6 @@ export class ProductoService {
     
     const httpOption = {
       headers: new HttpHeaders({
-        'content-type' : 'application/x-www-form-urlencoded',
-        'X-RapidAPI-Key': 'this.8034f52893msha40e8a7aaa57215p155a6fjsn2294956a4b4a',
-        'X-RapidAPI-Host': 'community-neutrino-currency-conversion.p.rapidapi.com'
       })
     }
     const body = new HttpParams()
@@ -40,6 +37,18 @@ export class ProductoService {
 //          .set('to_type', param.aTipo);
 
     return this.http.get(this.direccion ,httpOption);
+  }
+
+  createProducto(prod:Producto):Observable<any>{
+    
+    const httpOption = {
+      headers: new HttpHeaders({
+      })
+    }
+    const body = new HttpParams()
+//      .set('from-value', param.valor);
+
+    return this.http.post(this.direccion ,body ,httpOption);
   }
 
 

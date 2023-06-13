@@ -42,4 +42,16 @@ export class FormProductoComponent implements OnInit {
     )
   }
 
+  guardarProducto(prod:Producto){
+    this.productoService.createProducto(prod).subscribe(
+      result =>{
+        console.log(result);
+        Object.assign(this.producto, result);
+      },
+      error=>{
+        console.log(error);
+      }
+    )
+  }
+
 }

@@ -8,34 +8,22 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col"></th>
-                  <th scope="col"></th>
-                  <th scope="col" class="text-center"><img src="assets/pageb/eeuu.jpg" alt="" class="rounded" width="50px"><br>USD</th>
-                  <th scope="col" class="text-center"><img src="assets/pageb/inglaterra.jpg" alt="" class="rounded" width="50px"><br>GBP</th>
-                  <th scope="col" class="text-center"><img src="assets/pageb/argentina.jpg" alt="" class="rounded" width="50px"><br>ARS</th>
+                  <th scope="col" class="text-center">Transacción</th>
+                  <th scope="col" class="text-center">Cantidad</th>
+                  <th scope="col" class="text-center">Origen</th>
+                  <th scope="col" class="text-center">Destino</th>
+                  <th scope="col" class="text-center">Resultado</th>
+                  <th scope="col" class="text-center">E-mail</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody *ngFor="let trn of transacciones">
                 <tr>
-                  <th scope="row" class="text-center"><img src="assets/pageb/eeuu.jpg" alt="" class="rounded" width="50px"></th>
-                  <th scope="row" class="text-center">USD <br>Inverse</th>
-                  <td class="text-center">1.000000<br>1.000000</td>
-                  <td class="text-center">0.811469<br>1.232332</td>
-                  <td class="text-center">64.87725<br>0.015414</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center"><img src="assets/pageb/inglaterra.jpg" alt="" class="rounded" width="50px"></th>
-                  <th scope="row" class="text-center">USD <br>Inverse</th>
-                  <td class="text-center">1.232332<br>0.811469</td>
-                  <td class="text-center">1.000000<br>1.000000</td>
-                  <td class="text-center">79.95034<br>0.012508</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center"><img src="assets/pageb/argentina.jpg" alt="" class="rounded" width="50px"></th>
-                  <th scope="row" class="text-center">USD <br>Inverse</th>
-                  <td class="text-center">0.015414<br>64.87725</td>
-                  <td class="text-center">0.012508<br>79.95034</td>
-                  <td class="text-center">1.000000<br>1.000000</td>
+                  <th scope="row" class="text-center">{{trn.id}}</th>
+                  <th scope="row" class="text-center">{{trn.valor}}</th>
+                  <td scope="row" class="text-center">{{trn.deTipo}}</td>
+                  <td scope="row" class="text-center">{{trn.aTipo}}</td>
+                  <td scope="row" class="text-center">{{trn.resultado}}</td>
+                  <td scope="row" class="text-center">{{trn.email}}</td>
                 </tr>
               </tbody>
             </table>
@@ -47,6 +35,10 @@
           </div>
           <div class="bg-info ">
             <form action="get" class="bg-info row g-3">
+              <div class="mb-3">
+                <label for="email" class="form-label">Ingrese su email</label>
+                <input type="email" class="form-control" id="email" [(ngModel)]="param.email" name="email">
+              </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">Cantidad</label>
                 <input type="text" class="form-control" id="valor" [(ngModel)]="param.valor" name="valor">
