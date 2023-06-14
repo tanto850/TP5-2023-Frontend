@@ -33,11 +33,11 @@ export class FormProductoComponent implements OnInit {
   cargarProducto(id:String){
     this.productoService.getProducto(id).subscribe(
       result =>{
-        console.log(result);
-        Object.assign(this.producto, result);
+        alert(result.msg);
+        this.producto = new Producto();
       },
       error=>{
-        console.log(error);
+        alert(error.msg);
       }
     )
   }
@@ -45,11 +45,11 @@ export class FormProductoComponent implements OnInit {
   guardarProducto(prod:Producto){
     this.productoService.createProducto(prod).subscribe(
       result =>{
-        console.log(result);
-        Object.assign(this.producto, result);
+        alert(result.msg);
+        this.producto = new Producto();
       },
       error=>{
-        console.log(error);
+        alert(error.msg);
       }
     )
   }

@@ -43,10 +43,12 @@ export class ProductoService {
     
     const httpOption = {
       headers: new HttpHeaders({
+        "Content-type":"application/json"
       })
     }
-    const body = new HttpParams()
+    const params = new HttpParams()
 //      .set('from-value', param.valor);
+    let body = JSON.stringify(prod);
 
     return this.http.post(this.direccion ,body ,httpOption);
   }

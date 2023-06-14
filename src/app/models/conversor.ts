@@ -1,10 +1,10 @@
 export class Conversor {
 
-    id!:string;
-    valor!:string;
-    resultado!:string;
     deTipo!:string;
+    valor!:Number;
     aTipo!:string;
+    resultado!:Number;
     email!:string;
+    tasa!:string;
 
 }

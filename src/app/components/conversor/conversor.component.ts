@@ -32,12 +32,15 @@ export class ConversorComponent implements OnInit {
         console.log(result);
         this.resultado = result.result;
         this.param.resultado = result.result;
+        this.param.tasa = result.tasa;
         this.conversorService.createTransaccion(this.param).subscribe(
           result=>{
-            console.log("Transaccion creada")
+            alert(result.msg);
+            this.param = new Conversor();
+            this.obtenerTrns();
           },
           error=>{
-            console.log(error);
+            alert(error.msg);
           }
         )
       },
@@ -48,7 +51,6 @@ export class ConversorComponent implements OnInit {
   }
 
   obtenerTrns(){
-
     this.conversorService.getTransaccions().subscribe(
       result=>{
         Object.assign(this.transacciones, result);
