@@ -7,6 +7,7 @@ import { DownloaderComponent } from './components/downloader/downloader.componen
 import { IpinfoComponent } from './components/ipinfo/ipinfo.component'
 import { ProductoComponent } from './components/producto/producto.component';
 import { FormProductoComponent } from './components/form-producto/form-producto.component'
+import { TicketComponent } from './components/ticket/ticket.component';
 
 const routes: Routes = [
   {path:"conversor", component: ConversorComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"downloader", component: DownloaderComponent},
   {path:"ipinfo", component: IpinfoComponent},
   {path:"productos", component: ProductoComponent},
-  {path:"formproducto/:id", component: FormProductoComponent}
+  {path:"formproducto/:id", component: FormProductoComponent},
+  {path:"ticket", component: TicketComponent},
 ];
 
 @NgModule({

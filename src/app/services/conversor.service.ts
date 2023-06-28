@@ -24,9 +24,9 @@ export class ConversorService {
     let direccion = "https://community-neutrino-currency-conversion.p.rapidapi.com/convert";
 
     const body = new HttpParams()
-      .set('from-value', param.valor.toString())
-        .set('from-type', param.deTipo)
-          .set('to_type', param.aTipo);
+      .set('from-value', param.cantidadOrigen.toString())
+        .set('from-type', param.monedaOrigen)
+          .set('to_type', param.monedaDestino);
 
     return this.http.post(direccion ,body ,httpOption);
   }
@@ -41,10 +41,7 @@ export class ConversorService {
 
     let direccion = "http://localhost:3000/api/transaccion/";
 
-    const params = new HttpParams()
-    //  .set('from-value', param.valor)
-    //    .set('from-type', param.deTipo)
-    //      .set('to_type', param.aTipo);
+    const params = new HttpParams();
     let body = JSON.stringify(trans);
     
     return this.http.post(direccion ,body ,httpOption);

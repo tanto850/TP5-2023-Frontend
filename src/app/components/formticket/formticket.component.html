@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+      TICKETS
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+                <label for="Precio" class="form-label">Precio</label>
+                <input type="Number" class="form-control" id="precio" [(ngModel)]="ticket.precioTicket" name="precio">
+            </div>
+            <div class="mb-3">
+                <label for="categoriaEspectador" class="form-label">Categoría Espectador</label>
+                <textarea name="categoriaEspectador" class="form-control" id="categoriaEspectador" rows="3" [(ngModel)]="ticket.categoriaEspectador"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="fechaCompra" class="form-label">Fecha de Compra</label>
+                <input type="Date" class="form-control" id="fechaCompra" [(ngModel)]="ticket.fechaCompra" name="fechaCompra">
+            </div>
+            <!--espectador-->
+            <button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Guardar</button>   
+            <!--button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Volver</button>             
+            <button type="button" class="btn btn-primary" (click)="verProducto(p)">Actualizar</button-->              
+
+        </form>
+    </div>
+</div>

@@ -8,7 +8,6 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col" class="text-center">Transacción</th>
                   <th scope="col" class="text-center">Cantidad</th>
                   <th scope="col" class="text-center">Origen</th>
                   <th scope="col" class="text-center">Destino</th>
@@ -18,12 +17,11 @@
               </thead>
               <tbody *ngFor="let trn of transacciones">
                 <tr>
-                  <th scope="row" class="text-center">{{trn.id}}</th>
-                  <th scope="row" class="text-center">{{trn.valor}}</th>
-                  <td scope="row" class="text-center">{{trn.deTipo}}</td>
-                  <td scope="row" class="text-center">{{trn.aTipo}}</td>
-                  <td scope="row" class="text-center">{{trn.resultado}}</td>
-                  <td scope="row" class="text-center">{{trn.email}}</td>
+                  <th scope="row" class="text-center">{{trn.cantidadOrigen}}</th>
+                  <td scope="row" class="text-center">{{trn.monedaOrigen}}</td>
+                  <td scope="row" class="text-center">{{trn.monedaDestino}}</td>
+                  <td scope="row" class="text-center">{{trn.cantidadDestino}}</td>
+                  <td scope="row" class="text-center">{{trn.emailCliente}}</td>
                 </tr>
               </tbody>
             </table>
@@ -37,15 +35,15 @@
             <form action="get" class="bg-info row g-3">
               <div class="mb-3">
                 <label for="email" class="form-label">Ingrese su email</label>
-                <input type="email" class="form-control" id="email" [(ngModel)]="param.email" name="email">
+                <input type="email" class="form-control" id="email" [(ngModel)]="param.emailCliente" name="email">
               </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">Cantidad</label>
-                <input type="text" class="form-control" id="valor" [(ngModel)]="param.valor" name="valor">
+                <input type="text" class="form-control" id="valor" [(ngModel)]="param.cantidadOrigen" name="valor">
               </div>
               <div class="mb-3">
                 <label for="de" class="form-label">De</label>
-                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.deTipo" name="deTipo">
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.monedaOrigen" name="deTipo">
                   <option value="AUD">AUD Australia Dólar</option>
                   <option value="GBP">GBP Libra Esterlina</option>
                   <option value="EUR">EUR Euro</option>
@@ -58,7 +56,7 @@
               </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">A</label>
-                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.aTipo" name="aTipo">
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.monedaDestino" name="aTipo">
                   <option value="AUD">AUD Australia Dólar</option>
                   <option value="GBP">GBP Libra Esterlina</option>
                   <option value="EUR">EUR Euro</option>
@@ -70,7 +68,7 @@
                 </select>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="resultado" placeholder="{{resultado}}" disabled>
+                <input type="text" class="form-control" id="resultado" [(ngModel)]="param.cantidadDestino" disabled>
               </div>
               <div class="d-grid gap-2 mg-bottom-2 mb-3" >
                 <button class="btn btn-primary" type="button" (click)="convertir()">Convertir...</button>

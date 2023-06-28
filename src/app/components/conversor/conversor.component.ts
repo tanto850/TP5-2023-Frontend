@@ -30,16 +30,18 @@ export class ConversorComponent implements OnInit {
     this.conversorService.getDivisa(this.param).subscribe(
       result=>{
         console.log(result);
-        this.resultado = result.result;
-        this.param.resultado = result.result;
-        this.param.tasa = result.tasa;
+        console.log('Leido');
+        this.param.cantidadDestino = result.result;
+        this.param.tasaConversion = '';
         this.conversorService.createTransaccion(this.param).subscribe(
           result=>{
+            console.log('Se creó la transaccion');
             alert(result.msg);
             this.param = new Conversor();
             this.obtenerTrns();
           },
           error=>{
+            console.log('No se pudo crear la transacción');
             alert(error.msg);
           }
         )

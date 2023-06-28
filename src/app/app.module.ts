@@ -14,6 +14,8 @@ import { DownloaderComponent } from './components/downloader/downloader.componen
 import { IpinfoComponent } from './components/ipinfo/ipinfo.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { FormProductoComponent } from './components/form-producto/form-producto.component';
+import { TicketComponent } from './components/ticket/ticket.component';
+import { FormticketComponent } from './components/formticket/formticket.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FormProductoComponent } from './components/form-producto/form-producto.
     DownloaderComponent,
     IpinfoComponent,
     ProductoComponent,
-    FormProductoComponent
+    FormProductoComponent,
+    TicketComponent,
+    FormticketComponent
   ],
   imports: [
     BrowserModule,
