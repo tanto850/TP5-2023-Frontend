@@ -8,6 +8,7 @@ import { IpinfoComponent } from './components/ipinfo/ipinfo.component'
 import { ProductoComponent } from './components/producto/producto.component';
 import { FormProductoComponent } from './components/form-producto/form-producto.component'
 import { TicketComponent } from './components/ticket/ticket.component';
+import { FormticketComponent } from './components/formticket/formticket.component';
 
 const routes: Routes = [
   {path:"conversor", component: ConversorComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"productos", component: ProductoComponent},
   {path:"formproducto/:id", component: FormProductoComponent},
   {path:"ticket", component: TicketComponent},
+  {path:"formticket/:id", component: FormticketComponent},
 ];
 
 @NgModule({

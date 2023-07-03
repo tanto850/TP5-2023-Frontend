@@ -9,12 +9,25 @@ import { TicketService } from 'src/app/services/ticket.service';
 })
 export class TicketComponent implements OnInit {
 
-  ticket = Ticket;
   tickets = Array<Ticket>();
 
-  constructor(private ticketService : TicketService) { }
+  constructor(private ticketService : TicketService) {
+
+    this.tickets = new Array<Ticket>();
+
+   }
 
   ngOnInit(): void {
   }
 
+  cargarTickets(){
+    this.ticketService.getTickets().subscribe(
+      result=>{
+        this.tickets = result;
+      },
+      error=>{
+        console.log(error);
+      }
+      )
+    }
 }

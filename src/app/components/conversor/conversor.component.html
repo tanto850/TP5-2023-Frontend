@@ -38,12 +38,12 @@
                 <input type="email" class="form-control" id="email" [(ngModel)]="param.emailCliente" name="email">
               </div>
               <div class="mb-3">
-                <label for="Cantidad" class="form-label">Cantidad</label>
-                <input type="text" class="form-control" id="valor" [(ngModel)]="param.cantidadOrigen" name="valor">
+                <label for="valor" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="valor" [(ngModel)]="param.cantidadOrigen" name="valor">
               </div>
               <div class="mb-3">
-                <label for="de" class="form-label">De</label>
-                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.monedaOrigen" name="deTipo">
+                <label for="deTipo" class="form-label">De</label>
+                <select class="form-select" aria-label="De" [(ngModel)]="param.monedaOrigen" name="deTipo">
                   <option value="AUD">AUD Australia Dólar</option>
                   <option value="GBP">GBP Libra Esterlina</option>
                   <option value="EUR">EUR Euro</option>
@@ -55,8 +55,8 @@
                 </select>
               </div>
               <div class="mb-3">
-                <label for="Cantidad" class="form-label">A</label>
-                <select class="form-select" aria-label="Default select example" [(ngModel)]="param.monedaDestino" name="aTipo">
+                <label for="aTipo" class="form-label">A</label>
+                <select class="form-select" aria-label="A" [(ngModel)]="param.monedaDestino" name="aTipo">
                   <option value="AUD">AUD Australia Dólar</option>
                   <option value="GBP">GBP Libra Esterlina</option>
                   <option value="EUR">EUR Euro</option>
@@ -68,7 +68,7 @@
                 </select>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="resultado" [(ngModel)]="param.cantidadDestino" disabled>
+                <input type="text" class="form-control" id="resultado" [(ngModel)]="param.cantidadDestino" name="resultado" disabled>
               </div>
               <div class="d-grid gap-2 mg-bottom-2 mb-3" >
                 <button class="btn btn-primary" type="button" (click)="convertir()">Convertir...</button>
