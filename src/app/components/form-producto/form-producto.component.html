@@ -18,14 +18,14 @@
             </div>
             <div class="mb-3">
                 <label for="Precio" class="form-label">Precio</label>
-                <input type="Number" class="form-control" id="precio" [(ngModel)]="producto.precio" name="precio">
+                <input type="number" class="form-control" id="precio" [(ngModel)]="producto.precio" name="precio">
             </div>
             <div class="mb-3">
                 <label for="Stock" class="form-label">Stock Disponible</label>
                 <input type="number" class="form-control" id="stock" [(ngModel)]="producto.stock" name="stock">
             </div>
             <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="producto.destacado" checked>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="producto.destacado" name="destacado" checked>
                 <label class="form-check-label" for="flexCheckChecked">
                   Destacado
                 </label>

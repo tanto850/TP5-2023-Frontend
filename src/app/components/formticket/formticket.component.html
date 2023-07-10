@@ -10,16 +10,21 @@
             </div>
             <div class="mb-3">
                 <label for="categoriaEspectador" class="form-label">Categoría Espectador</label>
-                <textarea name="categoriaEspectador" class="form-control" id="categoriaEspectador" rows="3" [(ngModel)]="ticket.categoriaEspectador"></textarea>
+                <input name="categoriaEspectador" class="form-control" id="categoriaEspectador" column="3" [(ngModel)]="ticket.categoriaEspectador">
             </div>
             <div class="mb-3">
                 <label for="fechaCompra" class="form-label">Fecha de Compra</label>
                 <input type="Date" class="form-control" id="fechaCompra" [(ngModel)]="ticket.fechaCompra" name="fechaCompra">
             </div>
-            <!--espectador-->
-            <button type="button" class="btn btn-primary" *ngIf="accion=='new'" (click)="guardarTicket(ticket)">Guardar</button>               
-            <button type="button" class="btn btn-primary" *ngIf="accion=='update'" (click)="modificarTicket(ticket)">Actualizar</button>  
-            <button type="button" class="btn btn-primary" (click)="cancelar()">Cancelar</button> 
+            <div class="mb-3">
+                <label for="espectador" class="form-label">Espectador</label>
+                <select class="form-select" aria-label="espectador" [(ngModel)]="ticket.espectador" name="espectador">
+                    <option *ngFor="let e of espectadores" value="{{e.dni}}">{{e.apellido}}, {{e.nombre}}</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Guardar</button>   
+            <!--button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Volver</button>             
+            <button type="button" class="btn btn-primary" (click)="verProducto(p)">Actualizar</button-->              
 
         </form>
     </div>

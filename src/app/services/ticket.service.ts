@@ -67,4 +67,15 @@ export class TicketService {
     console.log(tic);
     return this.http.put(this.direccion + "update/" + id ,body ,httpOptions);
   }
+
+  getEspectadores():Observable<any>{
+    
+    const httpOption = {
+      headers: new HttpHeaders({
+      })
+    }
+    const body = new HttpParams()
+
+    return this.http.get("http://localhost:3000/api/espectadores/" ,httpOption);
+  }
 }
