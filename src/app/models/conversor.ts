@@ -1,9 +1,9 @@
 export class Conversor {
 
     monedaOrigen!:string;
-    cantidadOrigen!:Number;
+    cantidadOrigen!:number;
     monedaDestino!:string;
-    cantidadDestino!:Number;
+    cantidadDestino!:number;
     emailCliente!:string;
     tasaConversion!:string;
 

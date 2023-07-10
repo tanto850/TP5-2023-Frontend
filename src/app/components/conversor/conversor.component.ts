@@ -29,8 +29,6 @@ export class ConversorComponent implements OnInit {
   convertir(){
     this.conversorService.getDivisa(this.param).subscribe(
       result=>{
-        console.log(result);
-        console.log('Leido');
         this.param.cantidadDestino = result.result;
         this.param.tasaConversion = '';
         this.conversorService.createTransaccion(this.param).subscribe(

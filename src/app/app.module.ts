@@ -30,7 +30,7 @@ import { FormticketComponent } from './components/formticket/formticket.componen
     ProductoComponent,
     FormProductoComponent,
     TicketComponent,
-    FormticketComponent
+    FormticketComponent,
   ],
   imports: [
     BrowserModule,

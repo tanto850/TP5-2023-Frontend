@@ -17,9 +17,9 @@
                 <input type="Date" class="form-control" id="fechaCompra" [(ngModel)]="ticket.fechaCompra" name="fechaCompra">
             </div>
             <!--espectador-->
-            <button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Guardar</button>   
-            <!--button type="button" class="btn btn-primary" (click)="guardarTicket(ticket)">Volver</button>             
-            <button type="button" class="btn btn-primary" (click)="verProducto(p)">Actualizar</button-->              
+            <button type="button" class="btn btn-primary" *ngIf="accion=='new'" (click)="guardarTicket(ticket)">Guardar</button>               
+            <button type="button" class="btn btn-primary" *ngIf="accion=='update'" (click)="modificarTicket(ticket)">Actualizar</button>  
+            <button type="button" class="btn btn-primary" (click)="cancelar()">Cancelar</button> 
 
         </form>
     </div>
